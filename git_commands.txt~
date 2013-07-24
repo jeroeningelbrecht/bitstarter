@@ -1,5 +1,0 @@
-git push staging-heroku staging:master
-git push production-heroku master:master
-git push origin develop
-git push origin staging
-git push origin master
