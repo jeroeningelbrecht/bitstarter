@@ -1,9 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+<!-- We use row-fluid inside containers to achieve a resizable layout. -->
+<!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+<!-- http://stackoverflow.com/a/12270322 -->
+<div class="container">
+    <div class="row-fluid heading">
+        <div class="span10">
+            <h1>About</h1>
+        </div>
+    </div>
 
-</body>
-</html>
+    <!-- Beyond this part the marketing copy begins. -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+    <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+    <!-- http://placehold.it -->
+    <div class="row-fluid section1">
+        <div class="span5 offset1 asset">
+            <img class="img-polaroid" src="http://stepacrosstheline.files.wordpress.com/2013/07/images-3.jpeg">
+        </div>
+        <div class="span5 copy">
+            <p>
+                It's something we all lack and want: some time for ourselves. We simply try to aid you in the search for this so called "me time".
+                Set a goal and treat yourself with something from our <a href="#/suggestionlist">suggestion list</a>.
+            </p>
+        </div>
+    </div>
+</div>
