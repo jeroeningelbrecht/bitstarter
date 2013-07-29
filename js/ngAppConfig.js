@@ -11,9 +11,10 @@ var meTime = angular.module('meTime', [])
           $routeProvider
               .when('/home', {controller: 'CustomerController', templateUrl: 'partials/intro_customer.html'})
               .when('/about', {templateUrl:'partials/about.html'})
-              .when('/contact', {templateUrl:'partials/contact.html'})
+              .when('/help', {controller: 'HelpController', templateUrl: 'partials/help.html'})
               .when('/suggestionlist' ,{templateUrl:'partials/suggestionlist.html'})
               .when('/shops' ,{templateUrl:'partials/shops.html'})
+              .when('/contact', {templateUrl:'partials/contact.html'})
               .otherwise({redirectTo: '/home'});
     })
     ;

@@ -153,3 +153,18 @@ body > #wrap > .navbar .navbar-brand {
     text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
     float: right;
 }
+
+.pledgeItems{
+    background-color: #eee;
+}
+
+.pledgeItem {
+    border-bottom: 1px solid #999999;
+}
+
+.backers {
+    background: url(http://i564.photobucket.com/albums/ss89/guinee/backer_icon3.gif) no-repeat left center;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}

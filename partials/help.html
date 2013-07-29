@@ -1,0 +1,26 @@
+<!-- We use row-fluid inside containers to achieve a resizable layout. -->
+<!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
+<!-- http://stackoverflow.com/a/12270322 -->
+<div class="container">
+    <div class="row-fluid page-header">
+        <div class="span12">
+            <h1>Help us out <small>and donate to the cause</small></h1>
+        </div>
+    </div>
+
+    <!-- Beyond this part the marketing copy begins. -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/text-align -->
+    <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+    <!-- http://placehold.it -->
+    <div class="row-fluid">
+        <div class="col-lg-5 pledgeItems">
+            <div class="pledgeItem" ng-repeat="pledgeItem in pledgeItems">
+                <h4 class="bold">Pledge ${{ pledgeItem.amount }} or more</h4>
+                <p class="backers">{{ pledgeItem.backers }} backers</p>
+                <p>
+                    {{ pledgeItem.text }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
