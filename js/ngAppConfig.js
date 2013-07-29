@@ -6,8 +6,8 @@
  * To change this template use File | Settings | File Templates.
  */
 'use strict';
-var myTime = angular.module('meTime', [])
-.config(function($routeProvider){
+var meTime = angular.module('meTime', [])
+    .config(function($routeProvider){
           $routeProvider
               .when('/home', {controller: 'CustomerController', templateUrl: 'partials/intro_customer.html'})
               .when('/about', {templateUrl:'partials/about.html'})
@@ -15,4 +15,17 @@ var myTime = angular.module('meTime', [])
               .when('/suggestionlist' ,{templateUrl:'partials/suggestionlist.html'})
               .when('/shops' ,{templateUrl:'partials/shops.html'})
               .otherwise({redirectTo: '/home'});
+    })
+    ;
+
+meTime.directive('socialButtons', function($location){
+    return {
+        restrict: 'A',
+        scope: false,
+        templateUrl: 'partials/socialButtons.html',
+        link: function (scope, elem, attrs) {
+            scope.absUrl = $location.absUrl();
+            scope.encodedAbsUrl = encodeURIComponent($location.absUrl());
+        }
+    };
 });

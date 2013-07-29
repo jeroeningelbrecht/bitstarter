@@ -1,27 +1,45 @@
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 60px;
+}
+#footer {
+    background-color: #f5f5f5;
+}
+
 /* Large desktop */
 @media (min-width: 980px) {
-    body {
-        padding-top: 60px;
-    }
-    .linediv-l {
-        border-right: 1px white solid;
-    }
-    .linediv-r {
-        border-left: 1px white solid;
-    }
+
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .copy {
         padding: 2.5% 10%;
     }
-    .linediv-l {
-        border-bottom: 1px white solid;
-    }
-    .linediv-r {
-        border-top: 1px white solid;
-    }
+
 }
 
 /* All form factors */
@@ -32,7 +50,6 @@ body{
 }
 .heading, .subheading {
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-    text-align: center;
 }
 p.lead {
     padding-top: 1.5%;
@@ -52,36 +69,87 @@ p {
     padding: 2% 0%;
 }
 .actions {
-    background-color: #343434;
-    padding: 3% 0%;
+    background-color: floralwhite;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #888;
 }
-.video, .thermometer, .order, .social, .statistics {
+
+.actions .progress{
+    margin-bottom: 0;
+}
+
+.topBorder {
+    border-top: 1px solid black;
+}
+
+.timeleft {
+    background: url(http://i564.photobucket.com/albums/ss89/guinee/stopwatch.png) no-repeat left center;
+    padding-left: 40px;
+}
+
+.timeleft .nrDays{
+    font-size: 40px;
+}
+
+.moneyReceived, .moneyWanted {
+    color: green;
+}
+
+.moneyReceived {
+    font-size: 40px;
+}
+
+.moneyWanted{
+    font-style: italic;
+}
+
+.video, .thermometer, .order, .social {
     text-align: center;
-}
-.statistics h3, .statistics p {
-    color: white;
 }
 
 /* Marketing Copy and Footer */
-.copy {
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    text-align: justify;
-}
 .asset {
     padding: 2.5% 0%;
 }
-.footer {
-    color: #cccccc;
-    text-align: center;
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -40px;
 }
-.footer p {
-    font-size: 11px;
+
+#push, #footer {
+    height: 40px;
+    clear: both;
 }
-.footer a {
-    color: #ccccff;
+
+#wrap > .container {
+    padding-top: 40px;
+}
+
+#footer {
+    background-image: linear-gradient(to bottom,#222,#111);
+    background-repeat: repeat-x;
+}
+
+#footer  p {
+    text-align: right;
+    vertical-align: middle;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+    font-size: 12px;
 }
 
 .bold {
     font-weight: bold;
+}
+
+body > #wrap > .navbar .navbar-brand {
+    font-weight: bold;
+    color: #000;
+    text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+    float: right;
 }
